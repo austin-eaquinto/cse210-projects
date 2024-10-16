@@ -1,6 +1,6 @@
 using System;
 
-public class Comment
+class Comment
 {
     public string _name;
     public string _text;
@@ -14,6 +14,10 @@ public class Comment
     {
         _text = text;
     }
+    // public void GatherComments()
+    // {
+    //     foreach (Comment c in )
+    // }
 }
 /*  A comment should be defined by the Comment 
 class which has the responsibility for tracking both 

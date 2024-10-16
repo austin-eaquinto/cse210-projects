@@ -1,10 +1,10 @@
 using System;
 
-public class Video
+class Video
 {
     public string _title;
     public string _author;
-    public int _length;
+    public float _length;
     public int _commentAmount;
     public List<Comment> _comment;
 
@@ -16,7 +16,7 @@ public class Video
     {
         _author = author;
     }
-    public void TrackLength(int length)
+    public void TrackLength(float length)
     {
         _length = length;
     }
@@ -29,12 +29,19 @@ public class Video
         _commentAmount = commentAmount;
         // .Count function. and a list?
     }
-    public string ReturnAString()
+    // public string ReturnAString()
+    // {
+        // return $"{}";
+    // }
+        public void GatherComments()
     {
-        return $"{}"
+        foreach (Comment c in _comment)
+        {
+            Comment c = new Comment();
+            c._name = "bill";
+            c._text = "a short comment";
+        }
     }
-
-    Comment c = new Comment();
 }
 /* Your program should have a class for a Video
  that has the responsibility to track the title, 
