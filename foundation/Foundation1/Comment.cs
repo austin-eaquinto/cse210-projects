@@ -5,14 +5,14 @@ class Comment
     public string _name;
     public string _text;
 
-    public void TrackName(string name)
-    {
-        _name = name;
-
-    }
-    public void TrackText(string text)
+    public Comment(string name, string text)
     {
         _text = text;
+        _name = name;
+    }
+    public string CommentSection()
+    {
+        return _text + _name;
     }
     // public void GatherComments()
     // {

@@ -1,4 +1,5 @@
 using System;
+using System.Transactions;
 
 class Program
 {
@@ -6,21 +7,36 @@ class Program
     {
         // Console.WriteLine("Hello Foundation1 World!");
 
-        Comment c1 = new Comment();
-        // c1._name = "bill";
-        // c1._text = "a short comment";
-        // c1.GatherComments();
+        Video v = new Video();
+        v._title = "Cats";
+        v._author = "cats4fun";
+        v._length = 55;
+        Comment c = new Comment();
+        c._name = "robert";
 
-        Video v1 = new Video();
-        v1._title = "First Video";
-        v1._author = "Aaron Anderson";
-        v1._length = 5;
-        v1._commentAmount = 2;
-        v1._comment = new List<Comment>();
-        v1._comment.Add(c1);
+        Console.WriteLine(v.DisplayVideoInfo());
+        v.AddComments("a comment");
+        v.AddComments("second comment");
+        v.AddComments("third comment");
+        v.CommentCount();
+        v.PrintComments();
+        v.GetComments();
+        Console.WriteLine($"{v.CommentCount()} comments")
 
         Video v2 = new Video();
-        Video v3 = new Video();
+        v2._title = "title";
+        v2._author = "author";
+        v2._length = 55;
+        Comment c2 = new Comment();
+        c2._name = "robert";
+
+        Console.WriteLine(v2.DisplayVideoInfo());
+        v2.AddComments("a comment");
+        v2.AddComments("second comment");
+        v2.AddComments("third comment");
+        v2.CommentCount();
+        v2.PrintComments();
+        Console.WriteLine($"{v2.ComommentCount} comments");
     }
 }
 /* Once you have the classes in place, write a program 

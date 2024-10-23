@@ -1,46 +1,41 @@
 using System;
+using System.Collections.Generic;
 
 class Video
 {
     public string _title;
     public string _author;
     public float _length;
-    public int _commentAmount;
-    public List<Comment> _comment;
+    public int _commentCount;
+    public List<string> _comment;
 
-    public void TrackTitle(string title)
-    {
-        _title = title;
+    public Video ()
+    {   // initializes list
+        _comment = new List<string>();
     }
-    public void TrackAuthor(string author)
-    {
-        _author = author;
+    public void AddComments(string comments)
+    {   // adds to list
+        _comment.Add(comment);
     }
-    public void TrackLength(float length)
-    {
-        _length = length;
+    public int CommentCount()
+    {   // counts "items" in list
+        return _comment.Count;
     }
-        public void CommentList()
-    {
-        
+    public string DisplayVideoInfo()
+    {   // prints according to this setup
+        return $"Tile: {_title}\nCreator {_author}\n{_length} seconds long."
     }
-    public void NumberOfComments(int commentAmount)
+    public void PrintComments()
     {
-        _commentAmount = commentAmount;
-        // .Count function. and a list?
-    }
-    // public string ReturnAString()
-    // {
-        // return $"{}";
-    // }
-        public void GatherComments()
-    {
-        foreach (Comment c in _comment)
+        foreach (var comment in _comment)
         {
-            Comment c = new Comment();
-            c._name = "bill";
-            c._text = "a short comment";
+            Console.WriteLine(comment);
         }
+    }
+    public string GetComments()
+    {
+        Comment c = new Comment();
+        return c.CommentSection();
     }
 }
 /* Your program should have a class for a Video
