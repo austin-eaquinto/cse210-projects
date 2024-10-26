@@ -2,13 +2,13 @@ using System;
 
 abstract class Goal
 {
-    private string _shortName;
+    private string _name;
     protected string _description;
     private int _points;
 
     public Goal(string name, string description, int points)
     {
-        _shortName = name;
+        _name = name;
         _description = description;
         _points = points;
     }
@@ -22,7 +22,7 @@ abstract class Goal
     }
     public virtual string GetDetailsString()
     {
-        return $"Goal/{_shortName}/{_description}/{_points}";
+        return $"Goal/{_name}/{_description}/{_points}";
     }
     public abstract string GetStringRepresentation();
 }

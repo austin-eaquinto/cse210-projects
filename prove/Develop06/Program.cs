@@ -26,7 +26,8 @@ class Program
             }
             else if (response == "2")
             {
-
+                // goalManager.ListGoalNames();
+                goalManager.ListGoalDetails();
             }
             else if (response == "3")
             {
@@ -60,7 +61,7 @@ class Program
             }
             else if (response == "5")
             {
-
+                goalManager.RecordEvent();
             }
             else if (response == "6")
             {

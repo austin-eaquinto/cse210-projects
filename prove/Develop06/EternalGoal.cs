@@ -8,7 +8,7 @@ class EternalGoal : Goal
     }
     public override void RecordEvent()
     {
-
+        // empty because it will never be checked off
     }
     public override bool IsComplete()
     {

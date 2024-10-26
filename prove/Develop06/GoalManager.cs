@@ -9,21 +9,27 @@ class GoalManager
     {
 
     }
-    public void Start()
-    {
+    // public void Start()
+    // {
 
-    }
+    // }
     public void DisplayPlayerInfo()
     {
-
+        Console.WriteLine($"Your score: {_score}");
     }
     public void ListGoalNames()
     {
-        
+        for (int i =0; i < _goals.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {_goals[i].GetStringRepresentation()}");
+        }
     }
     public void ListGoalDetails()
     {
-
+        for (int i = 0; i < _goals.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {_goals[i].GetDetailsString()}");
+        }
     }
     public void CreateGoal()
     {   
@@ -74,13 +80,25 @@ class GoalManager
     {   // will call in each RecordEvent method and use it
         // according to polymorphism logic.
         // call this one into the main program.
+        ListGoalNames();
+        Console.Write("Which goal did you accomplish? ");
+        int number = Int32.Parse(Console.ReadLine());
 
+        if (number >= 0 && number < _goals.Count)
+        {
+            _goals[number].RecordEvent();
+            // _score += _goals[number].
+        }
+        else
+        {
+            Console.WriteLine("Please choose a valid number");
+        }
     }
     public void SaveGoals(string file)
     {
         string filename = "goal.txt";
 
-        using (StreamWriter outputfile = new StreamWriter(filename, true))
+        using (StreamWriter outputfile = new StreamWriter(filename))
         {
             foreach (var goal in _goals)
             {

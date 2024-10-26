@@ -20,19 +20,17 @@ class SimpleGoal : Goal
     }
     public override string GetStringRepresentation()
     {
-        string goalDescription = ""; // initializes the string value
+        string checkBox = ""; // initializes the string value
         if (_isComplete) // returns either option based on the true or false return
         {
-            goalDescription = "[X]";
+            checkBox = "[X]";
         }
         else
         {
-            goalDescription = "[ ]";
+            checkBox = "[ ]";
         }
-        return $"{goalDescription}: {GetDetailsString()}";
+        return $"{checkBox}: {GetDetailsString()}";
+        // string goalStatus = _isComplete ? "[X]" : "[ ]";
+        // return $"{foalStatus}: {GetDetailsString()};
     }
-    // public override string GetName()
-    // {
-    //     return _name;
-    // }
 }

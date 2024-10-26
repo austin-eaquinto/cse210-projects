@@ -41,6 +41,6 @@ class ChecklistGoal : Goal
         {
             goalDescription = "[X]";
         }
-        return $"{goalDescription}: {GetDetailsString()}";
+        return $"{goalDescription}: {GetDetailsString()} Bonus: {_bonus}";
     }
 }
