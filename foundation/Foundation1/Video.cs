@@ -7,13 +7,16 @@ class Video
     public string _author;
     public float _length;
     public int _commentCount;
-    public List<string> _comment;
+    public List<Comment> _comment;
 
-    public Video ()
+    public Video (string title, string author, float length)
     {   // initializes list
-        _comment = new List<string>();
+        _comment = new List<Comment>();
+        _title = title;
+        _author = author;
+        _length = length;
     }
-    public void AddComments(string comments)
+    public void AddComments(Comment comment)
     {   // adds to list
         _comment.Add(comment);
     }
@@ -23,24 +26,13 @@ class Video
     }
     public string DisplayVideoInfo()
     {   // prints according to this setup
-        return $"Tile: {_title}\nCreator {_author}\n{_length} seconds long."
+        return $"Title: {_title}\nCreator: {_author}\n{_length} seconds long.";
     }
     public void PrintComments()
     {
         foreach (var comment in _comment)
         {
-            Console.WriteLine(comment);
+            Console.WriteLine(comment.CommentSection());
         }
     }
-    public string GetComments()
-    {
-        Comment c = new Comment();
-        return c.CommentSection();
-    }
 }
-/* Your program should have a class for a Video
- that has the responsibility to track the title, 
- author, and length (in seconds) of the video. 
- Each video also has responsibility to store a 
- list of comments, and should have a method to 
- return the number of comments. */

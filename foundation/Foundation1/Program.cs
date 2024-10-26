@@ -7,46 +7,31 @@ class Program
     {
         // Console.WriteLine("Hello Foundation1 World!");
 
-        Video v = new Video();
-        v._title = "Cats";
-        v._author = "cats4fun";
-        v._length = 55;
-        Comment c = new Comment();
-        c._name = "robert";
-
+        Video v = new Video("Cats", "cats4fun", 55);
+        v.AddComments(new Comment("robert", "cute cats"));
+        v.AddComments(new Comment("ashley", "love cats"));
+        v.AddComments(new Comment("ricardo", "dogs are better"));
         Console.WriteLine(v.DisplayVideoInfo());
-        v.AddComments("a comment");
-        v.AddComments("second comment");
-        v.AddComments("third comment");
-        v.CommentCount();
+        Console.WriteLine($"{v.CommentCount()} comments");
         v.PrintComments();
-        v.GetComments();
-        Console.WriteLine($"{v.CommentCount()} comments")
+        Console.WriteLine();
 
-        Video v2 = new Video();
-        v2._title = "title";
-        v2._author = "author";
-        v2._length = 55;
-        Comment c2 = new Comment();
-        c2._name = "robert";
-
+        Video v2 = new Video("Dogs", "dogsRgr8", 120);
+        v2.AddComments(new Comment("bill", "best dog I ever had was a mutt"));
+        v2.AddComments(new Comment("sarah", "I love dogs!"));
+        v2.AddComments(new Comment("friend_of_cats","my cat listens better than these dogs"));
         Console.WriteLine(v2.DisplayVideoInfo());
-        v2.AddComments("a comment");
-        v2.AddComments("second comment");
-        v2.AddComments("third comment");
-        v2.CommentCount();
+        Console.WriteLine($"{v2.CommentCount()} comments");
         v2.PrintComments();
-        Console.WriteLine($"{v2.ComommentCount} comments");
+        Console.WriteLine();
+        
+        Video v3 = new Video("Lightning Strikes Building", "n8ure_watcher", 15);
+        v3.AddComments(new Comment("greg", "I once had lightning strike the roof of my house. It broke a window!"));
+        v3.AddComments(new Comment("susan", "so scary!"));
+        v3.AddComments(new Comment("fire_starter", "if only we could make lightning"));
+        Console.WriteLine(v3.DisplayVideoInfo());
+        Console.WriteLine($"{v3.CommentCount()} comments");
+        v3.PrintComments();
+        Console.WriteLine();
     }
 }
-/* Once you have the classes in place, write a program 
-that creates 3-4 videos, sets the appropriate values, 
-and for each one add a list of 3-4 comments (with the 
-commenter's name and text). Put each of these videos in 
-a list.
-
-Then, have your program iterate through the list of videos 
-and for each one, display the title, author, length, number 
-of comments (from the method) and then list out all of the 
-comments for that video. Repeat this display for each video 
-in the list. */

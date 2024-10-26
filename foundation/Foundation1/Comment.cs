@@ -12,14 +12,6 @@ class Comment
     }
     public string CommentSection()
     {
-        return _text + _name;
+        return $"User {_name} said:\n{_text}";
     }
-    // public void GatherComments()
-    // {
-    //     foreach (Comment c in )
-    // }
 }
-/*  A comment should be defined by the Comment 
-class which has the responsibility for tracking both 
-the name of the person who made the comment and the 
-text of the comment. */
