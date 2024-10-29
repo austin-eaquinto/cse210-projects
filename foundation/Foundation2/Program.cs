@@ -6,8 +6,7 @@ class Program
     {
         // Console.WriteLine("Hello Foundation2 World!");
 
-        // these parameters
-        Address address = new Address("street", "city", "state", "country");
-        Console.WriteLine(address);
+        Address address = new Address("Trejo Street", "Rexburg", "Idaho", "USA");
+        Console.WriteLine(address.CustomerAddress());
     }
 }

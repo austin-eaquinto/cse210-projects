@@ -1,10 +1,11 @@
 using System;
 
-class CustomerAddress{
+class Customer
+{
     private string _customerName;
     class Address;
 
-    public CustomerAddress(string name)
+    public Customer(string name)
     {
         _customerName = name;
     }

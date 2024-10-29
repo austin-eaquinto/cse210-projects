@@ -1,6 +1,6 @@
 using System;
 
-class order
+class Order
 {
     private List<Product> _products;
     private string _customer;
@@ -9,7 +9,7 @@ class order
     private string _shippingLabel;
     private int _costOfShipping;
 
-    public order()
+    public Order()
     {
 
     }

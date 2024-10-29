@@ -14,7 +14,7 @@ class Address
         method which returns a string.
         the Address object in the Program.cs takes
         parameters that determine what is printed. */
-    publlic Address(string street, string city, string stateOrProvince, string country)
+    public Address(string street, string city, string stateOrProvince, string country)
     {
         _street = street;
         _city = city;
@@ -26,8 +26,8 @@ class Address
         /* supposed to determine if the order is 
         from the United States or not */
         _country = country;
-        string whatCountry = Console.ReadLine();
-        if (whatCountry.ToLower() != "USA")
+        // string whatCountry = Console.ReadLine();
+        if (_country.ToLower() != "USA")
         {
             return false;
         }
